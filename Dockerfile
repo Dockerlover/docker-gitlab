@@ -8,6 +8,7 @@ ENV SERVICE_ID gitlab
 # 安装相关依赖包
 COPY gitlab-ce_7.13.2-ce.0_amd64.deb /var/install/gitlab/gitlab-ce.deb
 RUN dpkg -i /var/install/gitlab/gitlab-ce.deb && rm -rf /var/install/gitlab/*
+COPY gitlab.rb /etc/gitlab/gitlab.rb
 EXPOSE 80
 # 配置supervisord
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
