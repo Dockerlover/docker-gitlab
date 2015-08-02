@@ -16,7 +16,7 @@ docker化gitlab
 
 - 获取gitlab-ce安装包
 
-gitlab-ce_7.13.2-ce.0 [ubuntu:14.04](https://packages.gitlab.com/gitlab/gitlab-ce/packages/ubuntu/trusty/gitlab-ce_7.13.2-ce.0_amd64.deb/download)
+    gitlab-ce_7.13.2-ce.0 [ubuntu:14.04](https://packages.gitlab.com/gitlab/gitlab-ce/packages/ubuntu/trusty/gitlab-ce_7.13.2-ce.0_amd64.deb/download)
 
   
 - 构建代码
