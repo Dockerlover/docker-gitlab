@@ -6,7 +6,7 @@ MAINTAINER  liuhong1.happy@163.com
 ENV USER_NAME admin
 ENV SERVICE_ID gitlab
 # 安装相关依赖包
-RUN apt-get install -y ruby2.0 && rm -rf /var/lib/apt/list/*
+RUN apt-get update && apt-get install -y ruby2.0 && rm -rf /var/lib/apt/list/*
 COPY gitlab-ce_7.13.2-ce.0_amd64.deb /var/install/gitlab/gitlab-ce.deb
 RUN dpkg -i /var/install/gitlab/gitlab-ce.deb && rm -rf /var/install/gitlab/*
 COPY gitlab.rb /etc/gitlab/gitlab.rb
