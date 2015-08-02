@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y ruby2.0 && rm -rf /var/lib/apt/list/*
 COPY gitlab-ce_7.13.2-ce.0_amd64.deb /var/install/gitlab/gitlab-ce.deb
 RUN dpkg -i /var/install/gitlab/gitlab-ce.deb && rm -rf /var/install/gitlab/*
 COPY gitlab.rb /etc/gitlab/gitlab.rb
+RUN gem sources --remove https://rubygems.org/ && gem sources -a https://ruby.taobao.org/ && gem sources -l
 EXPOSE 80
 # 配置supervisord
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
