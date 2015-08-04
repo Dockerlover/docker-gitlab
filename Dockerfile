@@ -1,12 +1,10 @@
 # 基础镜像
-FROM docker-ubuntu
+FROM docker-ruby:2.2
 # 维护人员
 MAINTAINER  liuhong1.happy@163.com
 # 添加环境变量
 ENV USER_NAME admin
 ENV SERVICE_ID gitlab
-# 安装ruby2.0
-RUN apt-get update && apt-get install -y ruby2.0 && rm -rf /var/lib/apt/list/*
 # 复制deb安装包
 COPY gitlab-ce_7.13.2-ce.0_amd64.deb /var/install/gitlab/gitlab-ce.deb
 # 安装gitlab-ce
