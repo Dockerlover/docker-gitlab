@@ -1,7 +1,7 @@
 ## Url on which GitLab will be reachable.
 ## For more details on configuring external_url see:
 ## https://gitlab.com/gitlab-org/omnibus-gitlab/blob/629def0a7a26e7c2326566f0758d4a27857b52a3/README.md#configuring-the-external-url-for-gitlab
-external_url 'http://dd360632d03c'
+external_url 'http://localhost:10080'
 
 
 ## Note: configuration settings below are optional.
