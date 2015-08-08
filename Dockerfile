@@ -10,7 +10,7 @@ COPY gitlab-ce_7.13.2-ce.0_amd64.deb /var/install/gitlab/gitlab-ce.deb
 # 安装gitlab-ce
 RUN dpkg -i /var/install/gitlab/gitlab-ce.deb && rm -rf /var/install/gitlab/*
 # 拷贝gitlab.rb
-COPY gitlab.rb /etc/gitlab/gitlab.rb
+# COPY gitlab.rb /etc/gitlab/gitlab.rb
 # 默认暴露80端口和22端口
 EXPOSE 80 22
 # 挂载目录
