@@ -1,7 +1,7 @@
 ## Url on which GitLab will be reachable.
 ## For more details on configuring external_url see:
 ## https://gitlab.com/gitlab-org/omnibus-gitlab/blob/629def0a7a26e7c2326566f0758d4a27857b52a3/README.md#configuring-the-external-url-for-gitlab
-external_url 'http://localhost:10080'
+# external_url 'http://localhost:10080'
 
 
 ## Note: configuration settings below are optional.
@@ -10,7 +10,7 @@ external_url 'http://localhost:10080'
 # gitlab.yml configuration #
 ############################
 
-gitlab_rails['gitlab_ssh_host'] = 'localhost:10020'
+# gitlab_rails['gitlab_ssh_host'] = 'localhost:10020'
 # gitlab_rails['time_zone'] = 'UTC'
 # gitlab_rails['gitlab_email_enabled'] = true
 # gitlab_rails['gitlab_email_from'] = 'example@example.com'
