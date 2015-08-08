@@ -10,7 +10,7 @@ external_url 'http://localhost:10080'
 # gitlab.yml configuration #
 ############################
 
-# gitlab_rails['gitlab_ssh_host'] = 'ssh.host_example.com'
+gitlab_rails['gitlab_ssh_host'] = 'localhost:10020'
 # gitlab_rails['time_zone'] = 'UTC'
 # gitlab_rails['gitlab_email_enabled'] = true
 # gitlab_rails['gitlab_email_from'] = 'example@example.com'
