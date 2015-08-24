@@ -5,8 +5,10 @@ MAINTAINER  liuhong1.happy@163.com
 # 添加环境变量
 ENV USER_NAME admin
 ENV SERVICE_ID gitlab
-# 复制deb安装包
-COPY gitlab-ce_7.13.2-ce.0_amd64.deb /var/install/gitlab/gitlab-ce.deb
+# 下载deb安装包
+#COPY gitlab-ce_7.13.2-ce.0_amd64.deb /var/install/gitlab/gitlab-ce.deb
+ADD https://packages.gitlab.com/gitlab/gitlab-ce/packages/ubuntu/trusty/gitlab-ce_7.13.2-ce.0_amd64.deb/download /var/install/gitlab/gitlab-ce.deb
+
 # 安装gitlab-ce
 RUN dpkg -i /var/install/gitlab/gitlab-ce.deb && rm -rf /var/install/gitlab/*
 # 默认暴露80端口和22端口
