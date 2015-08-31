@@ -11,6 +11,10 @@ ADD https://packages.gitlab.com/gitlab/gitlab-ce/packages/ubuntu/trusty/gitlab-c
 
 # 安装gitlab-ce
 RUN dpkg -i /var/install/gitlab/gitlab-ce.deb && rm -rf /var/install/gitlab/*
+
+#配置
+RUN echo "postgresql['shared_buffers'] = '1MB'" >> /etc/gitlab/gitlab.rb
+
 # 默认暴露80端口和22端口
 EXPOSE 80 22
 # 挂载目录
